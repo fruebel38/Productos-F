@@ -8,7 +8,7 @@ export default function AddProduct() {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
-    const [category, setCategory] = useState('');
+   // const [category, setCategory] = useState('');
     const [errors, setErrors] = useState({});
 
 
@@ -26,15 +26,15 @@ export default function AddProduct() {
         !price ? errorsList.price = "El precio es obligatorio"
             : '';
 
-        !category ? errorsList.category = "La categoria es obligatoria"
-            : '';
+       // !category ? errorsList.category = "La categoria es obligatoria"
+       //     : '';
 
 
         addProduct({
             name,
             description,
             price,
-            category,
+           //category,
         })
             .then((result) => {
                 console.log(result);
@@ -47,7 +47,7 @@ export default function AddProduct() {
                     setName('');
                     setDescription('');
                     setPrice('');
-                    setCategory('');
+                   // setCategory('');
                     window.location.href = '/products2';
                 }
 
