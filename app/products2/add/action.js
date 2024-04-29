@@ -23,8 +23,8 @@ export async function addProduct(product) {
     : !product.price.match("^[0-9]+([\\.,][0-9]+)?$") ? errorsList.price = "El precio debe de ser un número"
     : '';
 
-    !product.category ? errorsList.category = "La categoria es obligatoria"
-    : '';
+  //  !product.category ? errorsList.category = "La categoria es obligatoria"
+   // : '';
 
     if (Object.keys(errorsList).length > 0) {
         return {
